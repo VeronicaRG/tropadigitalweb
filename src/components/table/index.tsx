@@ -24,8 +24,8 @@ export default function Table() {
           </S.TableRow>
         </thead>
         <tbody>
-          {EVENTS_INFO.map((item, idx) => (
-            <S.TableRow>
+          {EVENTS_INFO.map((item) => (
+            <S.TableRow key={item.data}>
               <S.TableCell>{item.name}</S.TableCell>
               <S.TableCell>{item.teamNumber}</S.TableCell>
               <S.TableCell>

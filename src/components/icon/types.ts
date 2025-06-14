@@ -3,8 +3,7 @@ import { componentSizes } from ".";
 
 export type IconName = Icon;
 
-const IconPropSize = componentSizes.icon;
-type IconSize = typeof IconPropSize;
+type IconSize = typeof componentSizes.icon;
 export type IconSizeProp = keyof IconSize;
 export interface IconProps {
   name: IconName;

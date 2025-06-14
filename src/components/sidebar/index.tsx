@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 import * as S from './styles'
 import Image from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
@@ -13,7 +13,6 @@ import BurguerMenu from '../burguerMenu'
 export default function Sidebar() {
   const router = useRouter()
   const pathName = usePathname();
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   const menuSelectedKey = Object.keys(MENU_ITEMS).find(key => MENU_ITEMS[key as keyof typeof MENU_ITEMS].path === pathName) || 'EVENTS'           
   
